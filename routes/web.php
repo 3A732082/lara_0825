@@ -14,8 +14,11 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
-    $post=Post::find(1);
-    dd($post);
+    $posts=Post::where('id','<',10)->orderBy('id','ASC')->get();
+    dd($posts);
+
+    //$post=Post::find(1);
+    //dd($post);
 
     //$post=\App\Models\Post::all();
     //dd($post);
