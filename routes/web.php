@@ -15,11 +15,17 @@ use App\Models\Post;
 
 Route::get('/', function () {
     $post=Post::find(1);
+    $post->title='saved title';
+    $post->content='saved content';
+    $post->save();
+
+    /*
+    $post=Post::find(1);
     $post->update([
         'title'=>'updatedtitle',
         'content'=>'updatedcontent',
     ]);
-
+    */
 
     //$posts=Post::where('id','<',10)->orderBy('id','ASC')->get();
     //dd($posts);
