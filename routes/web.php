@@ -14,10 +14,17 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
+    Post::create([
+        'title'=>'testtitle',
+        'content'=>'testcontent',
+    ]);
+
+    /*
     $post=new Post();
     $post->title ='test title11111';
     $post->content='test content1111';
     $post->save();
+    */
     //return view('welcome');
 });
 Route::get('index',[PostsController::class,'index'])->name('posts.index');
