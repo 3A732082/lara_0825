@@ -14,11 +14,15 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
+
+    $post=\App\Models\Post::all();
+    dd($post);
+    /*
     Post::create([
         'title'=>'testtitle',
         'content'=>'testcontent',
     ]);
-
+    */
     /*
     $post=new Post();
     $post->title ='test title11111';
