@@ -14,8 +14,15 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
-    $posts=Post::where('id','<',10)->orderBy('id','ASC')->get();
-    dd($posts);
+    $post=Post::find(1);
+    $post->update([
+        'title'=>'updatedtitle',
+        'content'=>'updatedcontent',
+    ]);
+
+
+    //$posts=Post::where('id','<',10)->orderBy('id','ASC')->get();
+    //dd($posts);
 
     //$post=Post::find(1);
     //dd($post);
