@@ -14,9 +14,14 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
+    $fourthPost=Post::find(4);
+    dd($fourthPost);
+
+
+    /*
     $featuredPosts=Post::where('is_feature',0)->get();
     dd($featuredPosts);
-
+    */
 
     /*
     $allPosts=Post::all();
