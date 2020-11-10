@@ -14,9 +14,15 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
+    $lastPost=Post::orderBy('id','DESC')->first();
+    dd($lastPost);
+
+
+
+    /*
     $fourthPost=Post::find(4);
     dd($fourthPost);
-
+    */
 
     /*
     $featuredPosts=Post::where('is_feature',0)->get();
