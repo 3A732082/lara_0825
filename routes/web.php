@@ -14,8 +14,14 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
+    $featuredPosts=Post::where('is_feature',0)->get();
+    dd($featuredPosts);
+
+
+    /*
     $allPosts=Post::all();
     dd($allPosts);
+    */
 
 
     //Post::destroy(3,5,7);
