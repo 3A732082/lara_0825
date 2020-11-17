@@ -14,8 +14,8 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
-    $lastPost=Post::orderBy('id','DESC')->first();
-    dd($lastPost);
+//    $lastPost=Post::orderBy('id','DESC')->first();
+//    dd($lastPost);
 
 
 
